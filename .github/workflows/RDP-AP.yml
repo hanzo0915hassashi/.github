@@ -17,7 +17,7 @@ jobs:
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - run: |
-        Set-Content authtoken.txt "ENTER_YOUR_NGROK_AUTHTOKEN_HERE" #enter your ngrok authtoken from https://dashboard.ngrok.com/get-started/your-authtoken (if you don't have account, make one)
+        Set-Content authtoken.txt "1tOSCbcHOkdPNIDgBHc3piNdliY_3yCmgFG9ARuYUQBCD6NWM" #enter your ngrok authtoken from https://dashboard.ngrok.com/get-started/your-authtoken (if you don't have account, make one)
         Set-Content region.txt "JP" #enter region for the Ngrok servers (available: EU, US, JP, AP, SA) write one of them with capital letters
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
