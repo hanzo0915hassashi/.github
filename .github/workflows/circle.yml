@@ -11,11 +11,6 @@ jobs:
     - run: |
         Set-Content authtoken.txt "1uIucCxbz64rQdSpNbeuLVEIfJw_3V6kPRFzddFGoxoRUyowD" #enter your ngrok authtoken from https://dashboard.ngrok.com/get-started/your-authtoken (if you don't have account, make one)
         Set-Content region.txt "JP" #enter region for the Ngrok servers (available: EU, US, JP, AP, SA) write one of them with capital letters
-    - run: | 
-        copy nssm.exe C:\Windows\System32
-        copy ngrok.exe C:\Windows\System32
-        copy authtoken.txt C:\Windows\System32
-        copy region.txt C:\Windows\System32
     - run: |
         $authtoken = Get-Content authtoken.txt
         .\ngrok.exe authtoken $authtoken
