@@ -11,9 +11,6 @@ jobs:
     - run: |
         Set-Content authtoken.txt "1uIucCxbz64rQdSpNbeuLVEIfJw_3V6kPRFzddFGoxoRUyowD" #enter your ngrok authtoken from https://dashboard.ngrok.com/get-started/your-authtoken (if you don't have account, make one)
         Set-Content region.txt "JP" #enter region for the Ngrok servers (available: EU, US, JP, AP, SA) write one of them with capital letters
-    - run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/tman10001/Windows2019RDP-AP/main/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/tman10001/Windows2019RDP-US/main/Files/nssm.exe -OutFile nssm.exe
     - run: | 
         copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
